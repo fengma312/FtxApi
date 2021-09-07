@@ -3,6 +3,8 @@ using FtxApi;
 using FtxApi.Enums;
 using Xunit;
 
+using Microsoft.Extensions.Logging;
+
 namespace FtxApi_Test
 {
     public class UnitTest1
@@ -19,17 +21,13 @@ namespace FtxApi_Test
         }
 
         [Fact]
-        public void Test1()
+        public void Api()
         {
             var client = new Client("_T68V7HmuHoiHlKmpUcOcbNOXkNWpzL-FvpO1VMa", "TsmQWQ4bXrOHzCVbD7vFzZtI-gs7j8tvh684hPY6");
             var api = new FtxRestApi(client);
-
-
             var ins = "BTC-1227";
-
             var dateStart = DateTime.UtcNow.AddMinutes(-100);
             var dateEnd = DateTime.UtcNow.AddMinutes(-10);
-
             var r1 = api.GetCoinsAsync().Result;
             var r2 = api.GetAllFuturesAsync().Result;
             var r3 = api.GetFutureAsync(ins).Result;
@@ -87,9 +85,29 @@ namespace FtxApi_Test
         //     await wsApi.Connect();
         // }
 
+        [Fact]
+        public void Web_Socket()
+        {
+            var ins = "BTC/USDT";
+            FtxWebSocket webSocket = new FtxWebSocket();
+            webSocket.Connect();
+            // string auth = webSocket.GetAuthRequest("", "");
+            // webSocket.Send(auth);
+            string orderbook = webSocket.GetSubscribeRequest("orderbook", ins);
+            webSocket.Send(orderbook);
+            // while (true)
+            {
+                System.Threading.Thread.Sleep(1000 * 30);
+            }
 
+            string orderbook_un = webSocket.GetUnsubscribeRequest("orderbook", ins);
+            webSocket.Send(orderbook_un);
 
+            while (true)
+            {
+                System.Threading.Thread.Sleep(1000 * 30);
+            }
+        }
 
-        
     }
 }

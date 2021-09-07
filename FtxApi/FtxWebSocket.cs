@@ -193,6 +193,7 @@ namespace FtxApi
             {
                 this.event_message(data);
             }
+            Console.WriteLine(data);
         }
 
         /// <summary>
@@ -286,7 +287,7 @@ namespace FtxApi
         /// <param name="channel"></param>
         /// <param name="instrument"></param>
         /// <returns></returns>
-        public static string GetSubscribeRequest(string channel, string instrument)
+        public string GetSubscribeRequest(string channel, string instrument)
         {
             return $"{{\"op\": \"subscribe\", \"channel\": \"{channel}\", \"market\": \"{instrument}\"}}";
         }
@@ -297,7 +298,7 @@ namespace FtxApi
         /// <param name="channel"></param>
         /// <param name="instrument"></param>
         /// <returns></returns>
-        public static string GetUnsubscribeRequest(string channel, string instrument)
+        public string GetUnsubscribeRequest(string channel, string instrument)
         {
             return $"{{\"op\": \"unsubscribe\", \"channel\": \"{channel}\", \"market\": \"{instrument}\"}}";
         }
