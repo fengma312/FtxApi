@@ -107,7 +107,7 @@ namespace FtxApi
             }
             catch (System.Exception ex)
             {
-                logger.LogError(event_id, ex, "idcm SDK websocket超时重连报错");
+                logger.LogError(event_id, ex, "Ftx SDK websocket超时重连报错");
             }
         }
 
@@ -244,7 +244,6 @@ namespace FtxApi
                     "\"op\": \"login\"}";
             return s;
         }
-
 
         /// <summary>
         /// 生成令牌
