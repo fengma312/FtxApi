@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FtxApi", "FtxApi\FtxApi.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FtxApi_Test", "FtxApi_Test\FtxApi_Test.csproj", "{2A4F17F2-4547-4B9D-B6CA-5EE156CE99BE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ftx", "Ftx\Ftx.csproj", "{744634DD-18E9-4377-8C22-05DE5D16F83C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,5 +46,17 @@ Global
 		{2A4F17F2-4547-4B9D-B6CA-5EE156CE99BE}.Release|x64.Build.0 = Release|Any CPU
 		{2A4F17F2-4547-4B9D-B6CA-5EE156CE99BE}.Release|x86.ActiveCfg = Release|Any CPU
 		{2A4F17F2-4547-4B9D-B6CA-5EE156CE99BE}.Release|x86.Build.0 = Release|Any CPU
+		{744634DD-18E9-4377-8C22-05DE5D16F83C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{744634DD-18E9-4377-8C22-05DE5D16F83C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{744634DD-18E9-4377-8C22-05DE5D16F83C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{744634DD-18E9-4377-8C22-05DE5D16F83C}.Debug|x64.Build.0 = Debug|Any CPU
+		{744634DD-18E9-4377-8C22-05DE5D16F83C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{744634DD-18E9-4377-8C22-05DE5D16F83C}.Debug|x86.Build.0 = Debug|Any CPU
+		{744634DD-18E9-4377-8C22-05DE5D16F83C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{744634DD-18E9-4377-8C22-05DE5D16F83C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{744634DD-18E9-4377-8C22-05DE5D16F83C}.Release|x64.ActiveCfg = Release|Any CPU
+		{744634DD-18E9-4377-8C22-05DE5D16F83C}.Release|x64.Build.0 = Release|Any CPU
+		{744634DD-18E9-4377-8C22-05DE5D16F83C}.Release|x86.ActiveCfg = Release|Any CPU
+		{744634DD-18E9-4377-8C22-05DE5D16F83C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -88,7 +88,7 @@ namespace FtxApi_Test
         [Fact]
         public void Web_Socket()
         {
-            var ins = "BTC/USDT";
+            var ins = "KNC/USDT";
             FtxWebSocket webSocket = new FtxWebSocket();
             webSocket.Connect();
             // string auth = webSocket.GetAuthRequest("", "");
