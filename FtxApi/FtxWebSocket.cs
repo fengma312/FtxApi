@@ -70,7 +70,7 @@ namespace FtxApi
         /// </summary>
         /// <param name="host">地址</param>
         /// <param name="logger">日志接口</param>
-        public FtxWebSocket(string host = "wss://ftx.com/ws/", ILogger logger = null)
+        public FtxWebSocket(string host = "wss://ftx.com/ws", ILogger logger = null)
         {
             this.api_host = host;
             this.logger = logger ?? NullLogger.Instance;
@@ -117,8 +117,8 @@ namespace FtxApi
         private void InitializeWebSocket()
         {
             websocket = new WebSocket(this.api_host);
-            //_WebSocket.SslConfiguration.EnabledSslProtocols = System.Security.Authentication.SslProtocols.None;
-            websocket.SslConfiguration.EnabledSslProtocols = SslProtocols.Tls12 | SslProtocols.Tls | SslProtocols.Tls12;
+            // websocket.SslConfiguration.EnabledSslProtocols = SslProtocols.None;
+            websocket.SslConfiguration.EnabledSslProtocols = SslProtocols.None | SslProtocols.Tls | SslProtocols.Tls11 | SslProtocols.Tls12 | SslProtocols.Tls12;
             websocket.OnError += WebSocket_OnError;
             websocket.OnOpen += WebSocket_OnOpen;
             last_received_time = DateTime.UtcNow;
